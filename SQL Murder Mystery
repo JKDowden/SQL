@@ -1,0 +1,71 @@
+
+select *
+from crime_scene_report
+where date = '20180115'
+and city = 'SQL City';
+
+select *
+from person
+where address_street_name = 'Franklin Ave';
+
+select *
+from person
+where address_street_name = 'Northwestern Dr'
+order by address_number desc;
+
+select *
+from interview
+where person_id = '16371';
+
+select *
+from interview
+where person_id = '14887';
+
+select *
+from drivers_license
+where plate_number like '%h42w%';
+
+Select *
+from get_fit_now_member
+where membership_status = 'gold'
+and id like '%48Z%';
+
+select *
+from get_fit_now_check_in
+where check_in_date = '20180109';
+
+select id, name
+from person
+where license_id = '423327';
+
+select id, name
+from person
+where license_id = '664760';
+
+select *
+from interview
+where person_id = '67318';
+
+select *
+from drivers_license
+where hair_color = 'red'
+and car_make = 'Tesla'
+and gender = 'female'
+and height between '65' and '67'
+group by id;
+
+select *
+from person
+where license_id = '918773';
+
+select person_id, event_id, event_name,date
+from facebook_event_checkin
+where event_name = 'SQL Symphony Concert'
+and date between '20170101' and '20171231'
+and event_id >= 3
+order by person_id asc;
+
+select *
+from income
+where ssn = '987756388';
+
